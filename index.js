@@ -24,8 +24,13 @@ document.querySelector('#projectsNav').addEventListener('click', function () {
 document.querySelector('#accountsNav').addEventListener('click', function () {
     changeDisplay('accountsArticle', 'cvArticle', 'projectsArticle');
     document.querySelector('#accountsNav').style.color = 'gold';
+    document.querySelectorAll('.articleSelect')[0].addEventListener('click', function () {
+        document.querySelector('#litReviewOne').style.display = 'block';
+        document.querySelector('#accountsArticle').style.display = 'none';
+    });
 });
 
 document.querySelector('#email').addEventListener('click', function () {
     changeDisplay('emailForm', 'cvArticle', 'projectsArticle', 'accountsArticle');
 });
+

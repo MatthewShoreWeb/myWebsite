@@ -32,7 +32,7 @@ article {
     text-align: center;
 }
 
-#cvArticle, #projectsArticle, #accountsArticle, #emailForm {
+#cvArticle, #projectsArticle, #accountsArticle, #emailForm, #litReviewOne {
     display: none;
 }
 
