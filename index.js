@@ -7,8 +7,8 @@ function changeDisplay(type1, type2, type3, type4) {
     document.querySelector('#' + type2).style.display = 'none';
     document.querySelector('#' + type3).style.display = 'none';
     try {
-    document.querySelector('#' + type4).style.display = 'none';
-    } catch (e) {}
+        document.querySelector('#' + type4).style.display = 'none';
+    } catch (e) { }
 };
 
 document.querySelector('#cvNav').addEventListener('click', function () {
@@ -27,6 +27,13 @@ document.querySelector('#accountsNav').addEventListener('click', function () {
     document.querySelectorAll('.articleSelect')[0].addEventListener('click', function () {
         document.querySelector('#litReviewOne').style.display = 'block';
         document.querySelector('#accountsArticle').style.display = 'none';
+    });
+    document.querySelectorAll('nav p').forEach(function (item) {
+        item.addEventListener('click', function () {
+            if (document.querySelector('#litReviewOne').style.display === 'block') {
+                document.querySelector('#litReviewOne').style.display = 'none';
+            }
+        })
     });
 });
 
