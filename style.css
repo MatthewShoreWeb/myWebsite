@@ -16,7 +16,7 @@ header {
     height: 10vh;
 }
 
-nav > p {
+nav > p, nav > a {
     margin-left: 20px;
     padding-right: 30px;
     font-weight: bold;
@@ -24,8 +24,12 @@ nav > p {
     display: inline;
     justify-content: center;
 }
-nav > p:hover {
+nav > p:hover, .rightNav:hover {
     color: gold;
+}
+.rightNav {
+    float: right;
+    color: white;
 }
 a {
     text-decoration: none;
