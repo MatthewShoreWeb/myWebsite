@@ -1,5 +1,5 @@
 <!DOCTYPE html>
- 
+
 <html lang='en'>
 
 <head>
@@ -264,6 +264,8 @@
 
             <div id='litReviewTwo'>
                 <h2> Security in Video Surveillance Systems </h2>
+                <p class='articleText'><b>Disclaimer: This paper was done as part of a team. However I did make
+                        substantial contributions.</b></p>
 
                 <p class='articleText'><b>Abstract</b> - This paper will detail the security in modern commercial video
                     surveillance systems; in
@@ -314,6 +316,57 @@
                     and physical security hazards and pose a significant risk if proper control measures are not
                     implemented during a system’s development life cycle. </p>
                 <h4> 2.2 Current Vulnerabilities </h4>
+                <h5>2.2.1 Man in the middle</h5>
+                <p class='articleText'>Previously, threat actors have been able to manipulate the video streams of
+                    IP-cameras allowing them to inject edited footage or freeze a frame in addition to traditional
+                    methods of attack such as a denial of service (DoS) attacks [3]. </p>
+                <h5>2.2.2 Data exfiltration</h5>
+                <p class='articleText'>Costin’s [3] survey has shown that the aforementioned systems could be used to
+                    send and receive data through covert side-channels (for example, acoustic, thermal, optical, and
+                    electromagnetic). This vulnerability can be exploited in air-gapped systems to leak sensitive
+                    information such as passwords and documents and could be used to allow an advanced adversary to
+                    maintain a foothold in the network as a means to repeat an attack.
+                </p>
+                <h5>2.2.3 Insecure software</h5>
+                <p class='articleText'>Many different vendors of IP CCTV cameras employ the use of simple generic
+                    firmware. The firmware lends itself to vulnerabilities (some made publicly known and listed as a
+                    CVE) given its simple architecture and apparent lack of development using modern network security
+                    practices. </p>
+                <p class='articleText'>If adequate due diligence in the form of encrypting source code and digital
+                    signing is not conducted throughout the deployment stage of the device firmware development, an
+                    attacker can reverse engineer the firmware to search for vulnerabilities in the code itself. An
+                    attacker could potentially upload a form of malware to the camera.[2] Of the two methods mentioned
+                    above, the practice of code encryption does not necessarily lie within the best interest of the
+                    manufacturer as obfuscating code decreases the likelihood of investigation by well-intended security
+                    researchers[10]. </p>
+                <p class='articleText'>Attackers using arbitrary code execution (ACE) vulnerabilities found within the
+                    software can execute any command on the device running it. From this, it follows that the attacker
+                    can perform privilege escalation and perform other malicious tasks. ACE vulnerabilities have been
+                    found in IP cameras, DVRs, and routers. [4] According to cvedetails, ACE vulnerabilities are the
+                    most prevalent CVEs found [12].</p>
+                <h5>2.2.4 Supply chain</h5>
+                <p class='articleText'>During the manufacturing process, there’s a risk that threat actors can insert a
+                    rootkit or hardware-based spyware into the firmware. This is called a supply-chain attack and it is
+                    very unlikely to occur but it could allow an advanced threat actor (such as an advanced persistent
+                    threat) to have complete control over the device as well as the local network. [4]</p>
+                <h5>2.2.5 Protocol-based</h5>
+                <p class='articleText'>WEP, WPA2 and WPA3 are security certification programs developed by the WiFi
+                    alliance. WPA2 is the most common certification currently in use, being used in 68.42% of polled
+                    networks [6], and was developed in 2004. While WPA2 is a set-up from the original WEP, being 16
+                    years old it still has significant vulnerabilities. For example, WPA2 can be exploited by a method
+                    known as KRACK. [5] KRACK is where an intruder performs a replay attack exploiting the
+                    vulnerabilities of resending message 3 in the four-way handshake used by WPA2. This allows the
+                    attacker to manipulate the packets being sent. [6]</p>
+                <h5>2.2.6 Botnet</h5>
+                <p class='articleText'>With the bandwidth allowed to these sorts of devices, IP cameras can not only
+                    pose a vulnerability to the network they are active on and the business that owns them but also to
+                    the wider internet as well, an example of a situation like this that had come to pass would be the
+                    Mirai malware attack in 2016, a malware that specifically targeted IoT devices due to there weak
+                    security with a lot of them still relying on default passwords making them easy to infect [2]. This
+                    example attack managed to disrupt a significant portion of the internet at the time by attacking the
+                    DNS provider DYN with a DDOS attack using over 100,000 infected devices. This attack goes to
+                    highlight the massive impact that the array of security flaws in these devices can have.</p>
+
                 <h3> 3.0 Proposed Risk Assessment </h3>
                 <p class='articleText'>In this section, we will present a risk assessment based on the previously
                     identified vulnerabilities and solutions. We will quantify each vulnerability on how likely it is to
@@ -334,8 +387,8 @@
                 <p class='articleText'><b>Figure 1</b> from the study assesses firewalls with security policies of 1 to
                     7 with higher being more secure. Their study shows the effectiveness of firewalls in preventing MitM
                     attacks and other vulnerabilities.</p>
-                <img />
-                <img />
+                <img src='Images/Second Article/Figure1.png'/>
+                <img src='Images/Second Article/Figure2.png'/>
                 <p class='articleText'>It is also proven that generally, as the protection increases, performance
                     decreases. See <b>Figure 2</b> which shows the direct transaction time increase with each security
                     policy
@@ -369,7 +422,7 @@
                     study showed that attacks on wireless networks decreased over the 4 years as a direct result of the
                     adoption of more up to date protocols. [14]
                 </p>
-                <img />
+                <img src='Images/Second Article/Figure4.png'/>
                 <h3> 5.0 Conclusion </h3>
                 <p class='articleText'>In conclusion, with the world being ever more interconnected the importance of
                     good security measures
@@ -384,23 +437,32 @@
                     to ensure network security in the future. Additionally, the vulnerabilities mentioned here is not a
                     complete list of all potential threats, just the ones viewed as most significant.
                 </p>
+                <h3>Risk Assessment Table</h3>
+                <img src='Images/Second Article/RiskAsessment.png'/>
                 <h3> References </h3>
                 <ul>
                     <ol>[1] Qian Clara Li; Huaning Niu; Apostolos Tolis Papathanassiou; Geng Wu, 5G Network Capacity:
-                        Key Elements and Technologies <a href="https://ieeexplore.ieee.org/abstract/document/6730679"></a>https://ieeexplore.ieee.org/abstract/document/6730679</a>, 31st
+                        Key Elements and Technologies <a
+                            href="https://ieeexplore.ieee.org/abstract/document/6730679"></a>https://ieeexplore.ieee.org/abstract/document/6730679</a>,
+                        31st
                         January 2014</ol>
                     <ol>[2] Cusack, B., & Tian, Z. (2017). Evaluating IP Surveillance Camera Vulnerabilities. Retrieved
-                        10 November 2020, from <a href="https://ro.ecu.edu.au/cgi/viewcontent.cgi?article=1202&context=ism">https://ro.ecu.edu.au/cgi/viewcontent.cgi?article=1202&context=ism</a></ol>
+                        10 November 2020, from <a
+                            href="https://ro.ecu.edu.au/cgi/viewcontent.cgi?article=1202&context=ism">https://ro.ecu.edu.au/cgi/viewcontent.cgi?article=1202&context=ism</a>
+                    </ol>
                     <ol>[3] Costin, A. (2016, October). Security of CCTV and video surveillance systems: Threats,
                         vulnerabilities, attacks, and mitigations. In Proceedings of the 6th international workshop on
                         trustworthy embedded devices (pp. 45-54).</ol>
                     <ol>[4] Kalbo, N., Mirsky, Y., Shabtai, A., & Elovici, Y. (2020). The Security of IP-Based Video
-                        Surveillance Systems. Sensors (14248220), 20(17), 4806. <a href="https://doi.org/10.3390/s20174806">https://doi.org/10.3390/s20174806</a></ol>
+                        Surveillance Systems. Sensors (14248220), 20(17), 4806. <a
+                            href="https://doi.org/10.3390/s20174806">https://doi.org/10.3390/s20174806</a></ol>
                     <ol>[5] Christopher P. Pohlios & Thaier Hayajney, A Comprehensive Attack Flow Model and Security
                         Analysis for Wi-Fi and WPA3, 24th September 2018, Section 2.3.2,
-                        <a href="https://www.mdpi.com/2079-9292/7/11/284/htm">https://www.mdpi.com/2079-9292/7/11/284/htm</a>
+                        <a
+                            href="https://www.mdpi.com/2079-9292/7/11/284/htm">https://www.mdpi.com/2079-9292/7/11/284/htm</a>
                     </ol>
-                    <ol>[6] Bobzilla, Arkasha, & Uhtu. (2020). WiGLE. <a href="https://wigle.net/stats">https://wigle.net/stats</a></ol>
+                    <ol>[6] Bobzilla, Arkasha, & Uhtu. (2020). WiGLE. <a
+                            href="https://wigle.net/stats">https://wigle.net/stats</a></ol>
                     <ol>[7] W. A. Arbaugh, N. Shankar, Y. C. J. Wan and Kan Zhang, "Your 80211 wireless network has no
                         clothes," in IEEE Wireless Communications, vol. 9, no. 6, pp. 44-51, Dec. 2002, DOI:
                         10.1109/MWC.2002.1160080.</ol>
@@ -412,14 +474,19 @@
                         000239-000242, DOI: 10.1109/SISY.2018.8524769.</ol>
                     <ol>[10] Silver, 2017. Should firmware images for IoT be encrypted for security reasons?. [Blog]
                         Stack Overflow, Available at
-                        <a href="https://security.stackexchange.com/questions/168620/should-firmware-images-for-iot-be-encrypted-for-security-reasons">https://security.stackexchange.com/questions/168620/should-firmware-images-for-iot-be-encrypted-for-security-reasons</a>.
+                        <a
+                            href="https://security.stackexchange.com/questions/168620/should-firmware-images-for-iot-be-encrypted-for-security-reasons">https://security.stackexchange.com/questions/168620/should-firmware-images-for-iot-be-encrypted-for-security-reasons</a>.
                     </ol>
                     <ol>[11] CETECOM™. 2020. Wi-Fi CERTIFIED WPA3™ Will Become Mandatory On July 1, 2020. [online]
                         Available at:
-                        <a href="https://www.cetecom.com/en/news/wi-fi-certified-wpa3-will-become-mandatory-july-1-2020">https://www.cetecom.com/en/news/wi-fi-certified-wpa3-will-become-mandatory-july-1-2020</a> [Accessed
-                        31 December 2020].</ol>
+                        <a
+                            href="https://www.cetecom.com/en/news/wi-fi-certified-wpa3-will-become-mandatory-july-1-2020">https://www.cetecom.com/en/news/wi-fi-certified-wpa3-will-become-mandatory-july-1-2020</a>
+                        [Accessed
+                        31 December 2020].
+                    </ol>
                     <ol>[12] Özkan, S. (n.d.). Vulnerabilities by type. cvedetails.
-                        <a href="https://www.cvedetails.com/vulnerabilities-by-types.php">https://www.cvedetails.com/vulnerabilities-by-types.php</a>
+                        <a
+                            href="https://www.cvedetails.com/vulnerabilities-by-types.php">https://www.cvedetails.com/vulnerabilities-by-types.php</a>
                     </ol>
                     <ol>[13] Kohlios CP, Hayajneh T. A Comprehensive Attack Flow Model and Security Analysis for Wi-Fi
                         and WPA3. Electronics. 2018; 7(11):284. </ol>
