@@ -51,7 +51,7 @@ article {
     margin-left: 30%;
     margin-right: 30%;
 }
-.articleText {
+.articleText, ul {
     margin-left: 10%;
     margin-right: 10%;
 }
