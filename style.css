@@ -39,7 +39,7 @@ article {
     text-align: center;
 }
 
-#cvArticle, #projectsArticle, #accountsArticle, #emailForm, #litReviewOne {
+#cvArticle, #projectsArticle, #accountsArticle, #emailForm, #litReviewOne, #litReviewTwo {
     display: none;
 }
 

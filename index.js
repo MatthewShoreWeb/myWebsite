@@ -28,6 +28,10 @@ document.querySelector('#accountsNav').addEventListener('click', function () {
         document.querySelector('#litReviewOne').style.display = 'block';
         document.querySelector('#accountsArticle').style.display = 'none';
     });
+    document.querySelectorAll('.articleSelect')[1].addEventListener('click', function () {
+        document.querySelector('#litReviewTwo').style.display = 'block';
+        document.querySelector('#accountsArticle').style.display = 'none';
+    });
     document.querySelectorAll('nav p').forEach(function (item) {
         item.addEventListener('click', function () {
             if (document.querySelector('#litReviewOne').style.display === 'block') {
