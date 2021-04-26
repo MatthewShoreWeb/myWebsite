@@ -39,7 +39,7 @@ article {
     text-align: center;
 }
 
-#cvArticle, #projectsArticle, #accountsArticle, #emailForm, #litReviewOne, #litReviewTwo {
+#cvArticle, #projectsArticle, #accountsArticle, #emailForm, #litReviewOne, #litReviewTwo, #ibmProject {
     display: none;
 }
 
@@ -56,7 +56,7 @@ article {
     margin-right: 10%;
 }
 
-.articleSelect {
+.articleSelect, .projectSelect {
     width: 50vw;
     height: 100px;
     margin: 10vh auto;

@@ -21,6 +21,16 @@ document.querySelector('#projectsNav').addEventListener('click', function () {
     document.querySelector('#projectsNav').style.color = 'gold';
 });
 
+// CV
+
+// PROJECTS
+document.querySelector('#ibm').addEventListener('click', function () {
+    document.querySelector('#ibmProject').style.display = 'block';
+    document.querySelector('#projectsArticle').style.display = 'none';
+})
+
+// ARTICLES
+
 document.querySelector('#accountsNav').addEventListener('click', function () {
     changeDisplay('accountsArticle', 'cvArticle', 'projectsArticle');
     document.querySelector('#accountsNav').style.color = 'gold';
