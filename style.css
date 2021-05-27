@@ -41,10 +41,21 @@ article {
 
 #cvArticle, #projectsArticle, #accountsArticle, #emailForm, #litReviewOne, #litReviewTwo, #ibmProject {
     display: none;
+    margin-bottom: 2.5%;
 }
 
 #welcome {
     justify-content: center;
+}
+
+
+.cvParagraph {
+    margin-right: 20%;
+    margin-left: 20%;
+}
+
+.goldText {
+    color: gold;
 }
 
 .welcomeText {
@@ -65,8 +76,10 @@ article {
     color: black;
     font-size: 24px;
     font-weight: bold;
-    background-color: white;
-    border: 10px solid blue;
+    background-color: gold;
+    border: 10px solid purple;
 }
 
-
+.articleSelect:hover, .projectSelect:hover {
+    background-color: lightgoldenrodyellow;
+}
