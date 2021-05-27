@@ -4,7 +4,7 @@ function changeDisplay(type) {
     });
 
     // We hide everything except the id specified in the function parameter.
-    let elements = ['#welcome', '#cvArticle', '#projectsArticle', '#accountsArticle', '#ibmProject']
+    let elements = ['#welcome', '#cvArticle', '#projectsArticle', '#accountsArticle', '#ibmProject', '#litReviewOne', '#litReviewTwo']
     for (let i = 0; i < elements.length; i++) {
         elements[i] === type ? document.querySelector(elements[i]).style.display = 'block' : document.querySelector(elements[i]).style.display = 'none';
     } 
